@@ -9,6 +9,7 @@ import DetalleProducto from "./pages/DetalleProducto";
 import Carrito from "./pages/Carrito";
 import Contacto from "./pages/Contacto";
 import Nosotros from "./pages/Nosotros";
+import Error404 from "./pages/Error404";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/carrito" element={<Carrito />} />
         <Route path="/contacto" element={<Contacto />} />
         <Route path="/nosotros" element={<Nosotros />} />
+        <Route path="*" element={<Error404 />} />
       </Routes>
 
       <Footer />
