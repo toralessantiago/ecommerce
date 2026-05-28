@@ -23,6 +23,18 @@ function Productos() {
     <div className="mt-4">
       <Container>
         <Form.Group className="mb-3">
+          <Form.Label>Categoría seleccionada: </Form.Label>
+
+          <Form.Select
+            value={categoria}
+            onChange={(e) => setCategoria(e.target.value)}
+          >
+            <option value="Todas">Todas</option>
+            <option value="Indumentaria">Indumentaria</option>
+            <option value="Calzado">Calzado</option>
+            <option value="Abrigo">Abrigo</option>
+            <option value="Accesorios">Accesorios</option>
+          </Form.Select>
           <Form.Label>Buscar producto: </Form.Label>
           <Form.Control
             type="text"
@@ -35,11 +47,11 @@ function Productos() {
           </Form.Check>
           <Form.Label>Rango de precio: ${rangoDePrecio[0]} a ${rangoDePrecio[1]}</Form.Label>
           <Form.Range
-          min={0} 
-          max={85000} 
-          step={1000}
-          value={rangoDePrecio[1]} 
-          onChange={(e) => setRangoDePrecio([0, e.target.value])}>
+            min={0}
+            max={85000}
+            step={1000}
+            value={rangoDePrecio[1]}
+            onChange={(e) => setRangoDePrecio([0, e.target.value])}>
           </Form.Range>
 
         </Form.Group>
