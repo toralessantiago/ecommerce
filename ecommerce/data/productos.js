@@ -1,10 +1,12 @@
+
 export const productos = [
 {
     id: 1,
     nombre: "Remera Running Dry-Fit",
     categoria: "Indumentaria",
     precio: 15000,
-    imagen: "",
+    imagen: "imagenes/remera-running.jpg",
+    imagenhover:"imagenes/remera-running-2.jpg",
     descripcion: "Remera transpirable de secado rápido, ideal para running y entrenamiento aeróbico.",
     stock: 25
 },
@@ -13,7 +15,8 @@ export const productos = [
     nombre: "Pantalón Jogging Algodón",
     categoria: "Indumentaria",
     precio: 28000,
-    imagen: "",
+    imagen: "imagenes/jogging.jpg",
+    imagenhover:"imagenes/jogging-2.jpg",
     descripcion: "Pantalón cómodo con ajuste en los tobillos, para entrenamiento de fuerza o uso diario.",
     stock: 15
 },
@@ -22,8 +25,9 @@ export const productos = [
     nombre: "Zapatillas Trail Running",
     categoria: "Calzado",
     precio: 85000,
-    imagen: "",
-    descripcion: "Calzado con suela de agarre extremo diseñado para terrenos irregulares y montaña.",
+    imagen: "imagenes/zapatillas.jpg",
+    imagenhover:"imagenes/zapatillas-2.jpg",
+    descripcion: "Zapatillas de running versátiles con una sensación suave y elástica.",
     stock: 10
 },
 {
@@ -31,7 +35,8 @@ export const productos = [
     nombre: "Calza Deportiva Larga",
     categoria: "Indumentaria",
     precio: 18000,
-    imagen: "",
+    imagen: "imagenes/calza.jpg",
+    imagenhover:"imagenes/calza-2.jpg",
     descripcion: "Calza de compresión con cintura alta y costuras planas para evitar roces.",
     stock: 0
 },
@@ -40,7 +45,8 @@ export const productos = [
     nombre: "Campera Rompevientos",
     categoria: "Abrigo",
     precio: 45000,
-    imagen: "",
+    imagen: "imagenes/campera-rompevientos.jpg",
+    imagenhover:"imagenes/campera-rompevientos-2.jpg",
     descripcion: "Campera ligera y compactable, resistente al viento y llovizna leve.",
     stock: 12
 },
@@ -49,7 +55,8 @@ export const productos = [
     nombre: "Top Deportivo Alto Impacto",
     categoria: "Indumentaria",
     precio: 14000,
-    imagen: "",
+    imagen: "imagenes/top.jpg",
+    imagenhover:"imagenes/top-2.jpg",
     descripcion: "Soporte firme con espalda cruzada para entrenamientos de alta intensidad.",
     stock: 20
 },
@@ -58,7 +65,8 @@ export const productos = [
     nombre: "Medias de Compresión Térmicas",
     categoria: "Accesorios",
     precio: 8500,
-    imagen: "",
+    imagen: "imagenes/medias.jpg",
+    imagenhover:"imagenes/medias-2.jpg",
     descripcion: "Medias hasta la rodilla diseñadas para mejorar la circulación y retener el calor.",
     stock: 45
 },
@@ -67,7 +75,8 @@ export const productos = [
     nombre: "Short de Fútbol",
     categoria: "Indumentaria",
     precio: 16000,
-    imagen: "",
+    imagen: "imagenes/short-de-futbol.jpg",
+    imagenhover:"imagenes/short-de-futbol-2.jpg",
     descripcion: "Short ligero con suspensor interno y tecnología de ventilación.",
     stock: 35
 },
@@ -76,7 +85,8 @@ export const productos = [
     nombre: "Botines Césped Sintético",
     categoria: "Calzado",
     precio: 72000,
-    imagen: "",
+    imagen: "imagenes/botines.jpg",
+    imagenhover:"imagenes/botines-2.jpg",
     descripcion: "Botines con tapones múltiples para máxima tracción en canchas de pasto sintético.",
     stock: 10
 },
@@ -85,7 +95,8 @@ export const productos = [
     nombre: "Gorra Running Ultraligera",
     categoria: "Accesorios",
     precio: 9500,
-    imagen: "",
+    imagen: "imagenes/gorra.jpg",
+    imagenhover:"imagenes/gorra-2.jpg",
     descripcion: "Gorra con paneles de malla transpirable y banda interna absorbente.",
     stock: 22
 },
@@ -94,7 +105,8 @@ export const productos = [
     nombre: "Buzo Medio Cierre Térmico",
     categoria: "Abrigo",
     precio: 38000,
-    imagen: "",
+    imagen: "imagenes/buzo.jpg",
+    imagenhover:"imagenes/buzo-2.jpg",
     descripcion: "Buzo de micropolar transpirable, ideal para calentamientos en días fríos.",
     stock: 18
 },
@@ -103,7 +115,8 @@ export const productos = [
     nombre: "Bolso Deportivo 40L",
     categoria: "Accesorios",
     precio: 32000,
-    imagen: "",
+    imagen: "imagenes/bolso.jpg",
+    imagenhover:"imagenes/bolso-2.jpg",
     descripcion: "Bolso amplio con compartimento ventilado separado para el calzado húmedo.",
     stock: 14
 }

@@ -1,0 +1,11 @@
+.caja-imagen {
+  overflow: hidden; 
+}
+
+.imagen-fluida {
+  transition: transform 0.4s ease; 
+}
+
+.imagen-fluida:hover {
+  transform: scale(1.15); 
+}
