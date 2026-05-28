@@ -1,4 +1,4 @@
-const productos = [
+export const productos = [
 {
     id: 1,
     nombre: "Remera Running Dry-Fit",
@@ -24,7 +24,7 @@ const productos = [
     precio: 85000,
     imagen: "",
     descripcion: "Calzado con suela de agarre extremo diseñado para terrenos irregulares y montaña.",
-    stock: 8
+    stock: 10
 },
 {
     id: 4,
@@ -33,7 +33,7 @@ const productos = [
     precio: 18000,
     imagen: "",
     descripcion: "Calza de compresión con cintura alta y costuras planas para evitar roces.",
-    stock: 30
+    stock: 0
 },
 {
     id: 5,
