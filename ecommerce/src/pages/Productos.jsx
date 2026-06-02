@@ -3,7 +3,7 @@ import { Col, Container, Row, Form, Alert, Card, Button } from "react-bootstrap"
 import "../../styles/global.css";
 import { productos } from "../../data/productos";
 
-
+import BotonAgregar from "../components/BotonAgregar";
 
 function Productos() {
   const [busqueda, setBusqueda] = useState("");
@@ -81,7 +81,7 @@ function Productos() {
                     <Card.Body>
                       <Card.Title>{p.nombre}</Card.Title>
                       <Card.Text>Precio: ${p.precio}</Card.Text>
-                      <Button as="" variant="outline-primary">Agregar al carrito</Button>
+                      <BotonAgregar producto={p} />
                     </Card.Body>
                   </Card>
                 </Col>

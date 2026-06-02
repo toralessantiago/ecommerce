@@ -1,0 +1,60 @@
+import { useContext } from "react";
+import { Card, Row, Col, Button, ButtonGroup} from "react-bootstrap";
+import { CarritoContext } from "../context/CarritoContext";
+
+function CarritoItem({ producto }) {
+
+    const {
+        incrementarCantidad,
+        decrementarCantidad,
+        eliminarDelCarrito
+        } = useContext(CarritoContext);
+
+    return (
+            <Card className="mb-3">
+                <Card.Body>
+                    <Row className="align-items-center">
+                        <Col md={3}>
+                            <img src={producto.imagen} 
+                            alt={producto.nombre} 
+                            className="img-fluid rounded"/>
+                        </Col>
+
+                        <Col md={5}>
+                            <h5>{producto.nombre}</h5>
+                            <p className="text-muted mb-1">
+                                Precio por unidad: ${producto.precio}
+                            </p>
+                            <p className="fw-bold mb-0">
+                                Subtotal: ${producto.precio * producto.cantidad}
+                            </p>
+                        </Col>
+
+                        <Col md={4}>
+                            <ButtonGroup className="mb-2">
+                                <Button variant="outline-secondary" 
+                                onClick={()=> decrementarCantidad(producto.id)}>
+                                    -
+                                </Button>
+                                <Button variant="light" disabled>
+                                    {producto.cantidad}
+                                </Button>
+                                <Button variant="outline-secondary" 
+                                onClick={()=> incrementarCantidad(producto.id)}>
+                                    +
+                                </Button>
+                            </ButtonGroup>
+                                <div>
+                                    <Button variant="danger" size="sm" 
+                                    onClick={()=> eliminarDelCarrito(producto.id)}>
+                                        Eliminar
+                                    </Button>
+                                </div>
+                        </Col>
+                    </Row>
+                </Card.Body>
+            </Card>
+    );
+ }
+
+export default CarritoItem;
