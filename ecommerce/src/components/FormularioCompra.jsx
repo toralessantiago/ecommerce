@@ -4,6 +4,19 @@ import { Button, Col, Form, Row } from 'react-bootstrap';
 function FormularioCompra({ alTerminar, totalAPagar }) {
     const [validated, setValidated] = useState(false);
 
+    const [vencimiento, setVencimiento] = useState('');
+    const cambioVencimiento = (e) => {
+        let input = e.target.value.replace(/\D/g, '');
+
+        if (input.length > 4) input = input.slice(0, 4);
+
+        if (input.length >= 3) {
+            setVencimiento(`${input.slice(0, 2)}/${input.slice(2)}`);
+        } else {
+            setVencimiento(input);
+        }
+    }
+
     const handleSubmit = (event) => {
         event.preventDefault();
         const form = event.currentTarget;
@@ -111,7 +124,7 @@ function FormularioCompra({ alTerminar, totalAPagar }) {
 
                 <Form.Group as={Col} controlId="formGridZip">
                     <Form.Label>Código Postal</Form.Label>
-                    <Form.Control name="codigoPostal" placeholder="Ej: 1714" required />
+                    <Form.Control name="codigoPostal" placeholder="Ej: 1714" type="number" maxLength={4} required />
                     <Form.Control.Feedback type="invalid">
                         Por favor ingresa un código postal válido.
                     </Form.Control.Feedback>
@@ -135,7 +148,7 @@ function FormularioCompra({ alTerminar, totalAPagar }) {
 
                 <Form.Group as={Col} md={4} controlId="formGridNumeroTarjeta">
                     <Form.Label>Número de Tarjeta</Form.Label>
-                    <Form.Control name="numeroTarjeta" type="text" placeholder="XXXX XXXX XXXX XXXX" maxLength={19} required />
+                    <Form.Control name="numeroTarjeta" type="number" placeholder="XXXX XXXX XXXX XXXX" maxLength={19} required />
                     <Form.Control.Feedback type="invalid">
                         Ingresa el número de la tarjeta.
                     </Form.Control.Feedback>
@@ -143,7 +156,9 @@ function FormularioCompra({ alTerminar, totalAPagar }) {
 
                 <Form.Group as={Col} md={2} controlId="formGridVencimiento">
                     <Form.Label>Vencimiento</Form.Label>
-                    <Form.Control name="vencimiento" type="text" placeholder="MM/AA" maxLength={5} required />
+                    <Form.Control name="vencimiento" type="text" placeholder="MM/AA" maxLength={5} value={vencimiento}
+                        onChange={cambioVencimiento}
+                        required />
                     <Form.Control.Feedback type="invalid">
                         Requerido.
                     </Form.Control.Feedback>
