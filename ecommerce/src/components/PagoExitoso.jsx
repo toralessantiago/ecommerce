@@ -1,16 +1,17 @@
-import { Button, Card, Badge } from 'react-bootstrap';
+import { Button, Card, Badge, Image } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import checkmark from "/checkmark.gif"
 
 export function PagoExitoso({ datos }) {
-  const fechaHoy = new Date().toLocaleDateString('es-AR', { 
-      year: 'numeric', 
-      month: 'long', 
-      day: 'numeric' 
+  const fechaHoy = new Date().toLocaleDateString('es-AR', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
   });
 
   const detallesTransaccion = {
     monto: datos?.montoTotal || '$0.00',
-    idTransaccion: 'APEX-' + Math.floor(Math.random() * 1000000000), 
+    idTransaccion: 'APEX-' + Math.floor(Math.random() * 1000000000),
     metodoPago: '**** ' + (datos?.tarjetaFinal || '0000'),
     fecha: fechaHoy,
     comercio: 'Apex Store',
@@ -21,12 +22,13 @@ export function PagoExitoso({ datos }) {
     <div className="min-vh-100 bg-light d-flex align-items-center justify-content-center p-4">
       <Card className="w-100 shadow-sm border-0" style={{ maxWidth: '450px' }}>
         <Card.Body className="p-4 p-md-5 text-center">
-          
+
           <div className="d-flex justify-content-center mb-4">
-            <div 
-              className="bg-success bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center" 
+            <div
+              className="bg-success bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center"
               style={{ width: '64px', height: '64px' }}
             >
+              <Image src={checkmark} alt="Cargando gif" />
             </div>
           </div>
 
@@ -42,26 +44,26 @@ export function PagoExitoso({ datos }) {
               <span className="text-muted">Monto</span>
               <span className="fs-5 fw-bold">{detallesTransaccion.monto}</span>
             </div>
-            
+
             <hr className="text-muted my-3" />
-            
+
             <div className="d-flex justify-content-between align-items-center mb-3">
               <span className="text-muted">ID de Transacción</span>
               <Badge bg="white" text="dark" className="border fw-normal">
                 {detallesTransaccion.idTransaccion}
               </Badge>
             </div>
-            
+
             <div className="d-flex justify-content-between align-items-center mb-3">
               <span className="text-muted">Método de Pago</span>
               <span className="fw-medium">{detallesTransaccion.metodoPago}</span>
             </div>
-            
+
             <div className="d-flex justify-content-between align-items-center mb-3">
               <span className="text-muted">Fecha</span>
               <span className="fw-medium">{detallesTransaccion.fecha}</span>
             </div>
-            
+
             <div className="d-flex justify-content-between align-items-center">
               <span className="text-muted">Comercio</span>
               <span className="fw-medium">{detallesTransaccion.comercio}</span>
@@ -76,7 +78,7 @@ export function PagoExitoso({ datos }) {
             <Button variant="primary" size="lg" className="d-flex align-items-center justify-content-center">
               Descargar Recibo
             </Button>
-            
+
             <Button as={Link} to="/" variant="outline-secondary" size="lg" className="d-flex align-items-center justify-content-center">
               Volver a la Tienda
             </Button>
@@ -85,7 +87,7 @@ export function PagoExitoso({ datos }) {
           <p className="text-muted small mt-4 mb-0">
             ¿Necesitas ayuda? Contacta a nuestro equipo en soporte@apexstore.com
           </p>
-          
+
         </Card.Body>
       </Card>
     </div>
