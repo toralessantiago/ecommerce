@@ -1,11 +1,78 @@
 .caja-imagen {
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 .imagen-fluida {
-  transition: transform 0.4s ease; 
+  transition: transform 0.4s ease;
 }
 
 .imagen-fluida:hover {
-  transform: scale(1.15); 
+  transform: scale(1.15);
+}
+
+/*carrousel imagenes detalleproducto*/
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: grayscale(100%) brightness(0.4);
+}
+
+.carousel-indicators button {
+  width: 12px !important;
+  height: 12px !important;
+  border-radius: 50% !important;
+  background-color: #777 !important;
+  margin: 0 5px !important;
+}
+
+.carousel-indicators .active {
+  background-color: #333 !important;
+}
+
+/*miniatura del producto al entrar a detalle*/
+.miniatura-producto {
+  width: 80px;
+}
+
+@media (min-width: 768px) {
+  .miniatura-producto {
+    width: 140px;
+  }
+}
+
+/*pasar de una imagen a otra en detalleProducto*/
+
+.imagen-principal-animada {
+  animation: deslizarFade 0.35s ease;
+}
+
+@keyframes deslizarFade {
+  from {
+    opacity: 0;
+    transform: translateX(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/*boton agregar al carrito*/
+
+.boton-pop {
+  animation: popAgregar 0.3s ease;
+}
+
+@keyframes popAgregar {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.08);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }

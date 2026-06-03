@@ -21,7 +21,7 @@ function App() {
         <Route path="/carrito" element={<Carrito />} />
         <Route path="/contacto" element={<Contacto />} />
         <Route path="/nosotros" element={<Nosotros />} />
-        <Route path="/error404" element ={<Error404/>}/>
+        <Route path="/*" element ={<Error404/>}/>
       </Routes>
 
       <Footer />
