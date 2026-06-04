@@ -1,6 +1,6 @@
-import { productos } from "../../data/productos"
 import { useState } from "react";
-import { Card, Button } from "react-bootstrap";
+import { Card } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 import BotonAgregar from "./BotonAgregar";
 
@@ -9,21 +9,29 @@ function ProductoCard({ producto }) {
 
   return (
     <Card className="h-100">
-      <div
-        className="caja-imagen"
-        onMouseEnter={() => setHover(true)}
-        onMouseLeave={() => setHover(false)}
-      >
-        <Card.Img
-          variant="top"
-          src={hover ? producto.imagenhover : producto.imagen}
-          className="imagen-fluida"
-          alt={`Fotografía de ${producto.nombre}`}
-        />
-      </div>
+      <Link to={`/producto/${producto.id}`}>
+        <div
+          className="caja-imagen"
+          onMouseEnter={() => setHover(true)}
+          onMouseLeave={() => setHover(false)}
+          style={{ cursor: "pointer" }}
+        >
+          <Card.Img
+            variant="top"
+            src={hover ? producto.imagenhover : producto.imagen}
+            className="imagen-fluida"
+            alt={`Fotografía de ${producto.nombre}`}
+          />
+        </div>
+      </Link>
+
       <Card.Body>
         <Card.Title>{producto.nombre}</Card.Title>
-        <Card.Text>Precio: ${producto.precio}</Card.Text>
+
+        <Card.Text>
+          ${producto.precio}
+        </Card.Text>
+
         <BotonAgregar producto={producto} />
       </Card.Body>
     </Card>
@@ -31,4 +39,3 @@ function ProductoCard({ producto }) {
 }
 
 export default ProductoCard;
-
