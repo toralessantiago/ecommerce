@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Card, Row, Col, Button, ButtonGroup} from "react-bootstrap";
 import { CarritoContext } from "../context/CarritoContext";
+import formatearPrecio  from "../../utils/formatearPrecio";
 
 function CarritoItem({ producto }) {
 
@@ -23,10 +24,10 @@ function CarritoItem({ producto }) {
                         <Col md={5}>
                             <h5>{producto.nombre}</h5>
                             <p className="text-muted mb-1">
-                                Precio por unidad: ${producto.precio}
+                                Precio por unidad: ${formatearPrecio(producto.precio)}
                             </p>
                             <p className="fw-bold mb-0">
-                                Subtotal: ${producto.precio * producto.cantidad}
+                                Subtotal: ${formatearPrecio(producto.precio * producto.cantidad)}
                             </p>
                         </Col>
 
@@ -39,17 +40,20 @@ function CarritoItem({ producto }) {
                                 <Button variant="light" disabled>
                                     {producto.cantidad}
                                 </Button>
-                                <Button variant="outline-secondary" 
+                                <Button variant="outline-secondary"  
+                                disabled={producto.cantidad >= producto.stock}
                                 onClick={()=> incrementarCantidad(producto.id)}>
                                     +
                                 </Button>
                             </ButtonGroup>
+                                
                                 <div>
                                     <Button variant="danger" size="sm" 
                                     onClick={()=> eliminarDelCarrito(producto.id)}>
                                         Eliminar
                                     </Button>
                                 </div>
+                                
                         </Col>
                     </Row>
                 </Card.Body>

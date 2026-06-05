@@ -4,15 +4,16 @@ import { CarritoContext } from "../context/CarritoContext";
 
 function BotonAgregar({ producto }) {
 
-    const { agregarAlCarrito } = useContext(CarritoContext);
-
+    const { carrito, agregarAlCarrito } = useContext(CarritoContext);
+    const productoEnCarrito = carrito.find(item => item.id === producto.id);
+    const cantidadEnCarrito = productoEnCarrito?.cantidad || 0;
     return (
         <Button
             variant="outline-primary"
-            disabled={producto.stock === 0}
+            disabled={producto.stock === 0 || cantidadEnCarrito >= producto.stock}
             onClick={() => agregarAlCarrito(producto)}
         >
-            {producto.stock === 0
+            {cantidadEnCarrito >= producto.stock
                 ? "Sin stock"
                 : "Agregar al carrito"}
         </Button>
