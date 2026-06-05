@@ -3,7 +3,7 @@ html,
 body,
 #root {
   background-color: #ffffff;
-  
+  color: #ffffff;
   font-family: "Inter", sans-serif;
   height: 100%;
   margin: 0;
@@ -343,73 +343,5 @@ h4 {
   .footer-right {
     flex-direction: column;
     gap: 8px;
-  }
-}
-
-
-/* HERO INICIO */
-
-.hero-inicio {
-  min-height: calc(100vh - 76px);
-
-  display: flex;
-  align-items: center;
-
-  background:
-    linear-gradient(
-      rgba(0, 0, 0, 0.35),
-      rgba(0, 0, 0, 0.35)
-    ),
-    url("https://images.unsplash.com/photo-1517649763962-0c623066013b?q=80&w=1800");
-
-  background-size: cover;
-  background-position: center;
-
-  color: white;
-}
-
-.hero-contenido {
-  max-width: 650px;
-}
-
-.hero-tag {
-  display: inline-block;
-
-  margin-bottom: 20px;
-  padding: 8px 14px;
-
-  border: 1px solid rgba(255,255,255,.3);
-
-  font-size: .85rem;
-  letter-spacing: 2px;
-}
-
-.hero-contenido h1 {
-  font-size: clamp(2.8rem, 6vw, 5.5rem);
-
-  line-height: 1;
-  font-weight: 700;
-
-  margin-bottom: 20px;
-}
-
-.hero-contenido p {
-  font-size: clamp(1rem, 2vw, 1.2rem);
-
-  margin-bottom: 30px;
-
-  max-width: 550px;
-}
-
-/* MOBILE */
-
-@media (max-width: 768px) {
-  .hero-inicio {
-    text-align: center;
-    justify-content: center;
-  }
-
-  .hero-contenido {
-    max-width: 100%;
   }
 }
