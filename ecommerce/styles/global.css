@@ -307,6 +307,10 @@ footer {
   width: 100% !important;
 }
 
+.row{
+  margin-bottom: 25px;
+}
+
 /*SECCION: CARRITO*/
 .contenedor-lista-carrito {
   max-height: 520px !important;
