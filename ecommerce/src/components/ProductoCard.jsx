@@ -1,38 +1,96 @@
 import { useState } from "react";
 import { Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
-
 import BotonAgregar from "./BotonAgregar";
 
 function ProductoCard({ producto }) {
   const [hover, setHover] = useState(false);
+  const [talle, setTalle] = useState("");
+  const [errorTalle, setErrorTalle] = useState(false);
+
+  const imagenes =
+    Array.isArray(producto.imagenes) && producto.imagenes.length > 0
+      ? producto.imagenes
+      : [];
+
+  const imagenPrincipal = imagenes[0] || "/placeholder.png";
+
+  const talles = Array.isArray(producto.talles) ? producto.talles : [];
 
   return (
-    <Card className="h-100">
-      <Link to={`/producto/${producto.id}`}>
-        <div
-          className="caja-imagen"
-          onMouseEnter={() => setHover(true)}
-          onMouseLeave={() => setHover(false)}
-          style={{ cursor: "pointer" }}
-        >
+    <Card
+      className="producto-card-hover h-100"
+      onMouseEnter={() => setHover(true)}
+      onMouseLeave={() => {
+        setHover(false);
+        setTalle("");
+        setErrorTalle(false);
+      }}
+    >
+      {/* IMAGEN */}
+      <Link to={`/producto/${producto.id}`} style={{ textDecoration: "none" }}>
+        <div className="producto-img-container">
           <Card.Img
-            variant="top"
-            src={hover ? producto.imagenhover : producto.imagen}
-            className="imagen-fluida"
-            alt={`Fotografía de ${producto.nombre}`}
+            src={imagenPrincipal}
+            alt={producto.nombre}
+            className="producto-img"
           />
         </div>
       </Link>
 
-      <Card.Body>
-        <Card.Title>{producto.nombre}</Card.Title>
+      {/* INFO */}
+      <Card.Body className="producto-body">
+        <Card.Title className="titulo">
+          <Link
+            to={`/producto/${producto.id}`}
+            style={{ textDecoration: "none", color: "inherit" }}
+          >
+            {producto.nombre}
+          </Link>
+        </Card.Title>
 
-        <Card.Text>
-          ${producto.precio}
-        </Card.Text>
+        <Card.Text className="precio">${producto.precio}</Card.Text>
 
-        <BotonAgregar producto={producto} />
+        {/* HOVER PANEL */}
+        <div className={`hover-panel ${hover ? "show" : ""}`}>
+          {/* TALLES */}
+          <div className="talles-overlay">
+            {talles.length > 0 ? (
+              talles.map((t) => (
+                <button
+                  key={t}
+                  type="button"
+                  className={`talle-chip ${talle === t ? "active" : ""}`}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+
+                    setTalle(t);
+                    setErrorTalle(false);
+                  }}
+                >
+                  {t}
+                </button>
+              ))
+            ) : (
+              <small className="text-muted">Sin talles</small>
+            )}
+          </div>
+
+          {/* ERROR */}
+          {errorTalle && (
+            <small className="text-danger d-block mb-2">
+              Seleccioná un talle
+            </small>
+          )}
+
+          {/* BOTÓN */}
+          <BotonAgregar
+            producto={producto}
+            talle={talle}
+            setErrorTalle={setErrorTalle}
+          />
+        </div>
       </Card.Body>
     </Card>
   );

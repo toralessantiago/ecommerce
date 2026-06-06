@@ -1,0 +1,40 @@
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1);
+  width: 32px;
+  height: 32px;
+  transition: transform 0.2s ease;
+}
+
+.carousel-control-prev:hover .carousel-control-prev-icon {
+  transform: translateX(-3px);
+}
+
+.carousel-control-next:hover .carousel-control-next-icon {
+  transform: translateX(3px);
+}
+
+.carousel-indicators button {
+  width: 8px !important;
+  height: 8px !important;
+  border-radius: 50% !important;
+  background-color: rgba(255, 255, 255, 0.3) !important;
+  margin: 0 6px !important;
+  border: none !important;
+  transition: all 0.2s ease !important;
+}
+.carousel {
+  max-height: 600px;
+  overflow: hidden;
+}
+
+.carousel-item {
+  height: auto;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+

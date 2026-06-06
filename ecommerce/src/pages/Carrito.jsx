@@ -46,7 +46,7 @@ function Carrito() {
       <Container className="mt-5">
         <Card className="text-center">
           <Card.Body>
-            <p>🛒 Carrito vacío</p>
+            <p>Carrito vacío</p>
             <p className="text-muted mb-0">
               Agregá algunos productos para comenzar tu compra.
             </p>

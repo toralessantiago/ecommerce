@@ -1,0 +1,16 @@
+.row.align-items-center.bg-white {
+  overflow: hidden !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+.col-md-5 p.text-muted {
+  font-size: 0.8rem !important;
+  color: #000000 !important;
+}
+
+.filtros-productos {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}

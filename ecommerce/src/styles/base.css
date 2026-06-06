@@ -1,0 +1,25 @@
+html, body, #root {
+  height: 100%;
+  margin: 0;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+@media (max-width: 768px) {
+  #root {
+    gap: 16px;
+  }
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Urbanist", sans-serif;
+  font-weight: 700;
+  color: #000000;
+}

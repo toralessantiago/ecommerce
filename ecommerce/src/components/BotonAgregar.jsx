@@ -1,23 +1,33 @@
 import { useContext } from "react";
-import { Button } from "react-bootstrap";
 import { CarritoContext } from "../context/CarritoContext";
 
-function BotonAgregar({ producto }) {
+function BotonAgregar({
+  producto,
+  talle,
+  setErrorTalle = () => {},
+}) {
+  const { agregarAlCarrito } = useContext(CarritoContext);
 
-    const { carrito, agregarAlCarrito } = useContext(CarritoContext);
-    const productoEnCarrito = carrito.find(item => item.id === producto.id);
-    const cantidadEnCarrito = productoEnCarrito?.cantidad || 0;
-    return (
-        <Button
-            variant="outline-primary"
-            disabled={producto.stock === 0 || cantidadEnCarrito >= producto.stock}
-            onClick={() => agregarAlCarrito(producto)}
-        >
-            {cantidadEnCarrito >= producto.stock
-                ? "Sin stock"
-                : "Agregar al carrito"}
-        </Button>
-    );
+  const handleClick = () => {
+    if (producto.talles?.length > 0 && !talle) {
+      setErrorTalle(true);
+      return;
+    }
+
+    agregarAlCarrito({
+      ...producto,
+      talle,
+    });
+  };
+
+  return (
+    <button
+      className="btn btn-dark w-100 mt-2"
+      onClick={handleClick}
+    >
+      Agregar al carrito
+    </button>
+  );
 }
 
 export default BotonAgregar;
