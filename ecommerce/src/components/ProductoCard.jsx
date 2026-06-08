@@ -54,9 +54,9 @@ function ProductoCard({ producto }) {
         {/* HOVER PANEL */}
         <div className={`hover-panel ${hover ? "show" : ""}`}>
           {/* TALLES */}
-          <div className="talles-overlay">
-            {talles.length > 0 ? (
-              talles.map((t) => (
+          {producto.stock > 0 && (
+            <div className="talles-overlay">
+              {talles.map((t) => (
                 <button
                   key={t}
                   type="button"
@@ -71,11 +71,9 @@ function ProductoCard({ producto }) {
                 >
                   {t}
                 </button>
-              ))
-            ) : (
-              <small className="text-muted">Sin talles</small>
-            )}
-          </div>
+              ))}
+            </div>
+          )}
 
           {/* ERROR */}
           {errorTalle && (

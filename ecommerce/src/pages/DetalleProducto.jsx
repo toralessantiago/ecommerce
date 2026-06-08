@@ -80,8 +80,13 @@ function DetalleProducto() {
                   <button
                     key={t}
                     type="button"
-                    className={`talle-chip ${talle === t ? "active" : ""}`}
+                    disabled={producto.stock === 0}
+                    className={`talle-chip ${talle === t ? "active" : ""} ${
+                      producto.stock === 0 ? "disabled-talle" : ""
+                    }`}
                     onClick={() => {
+                      if (producto.stock === 0) return;
+
                       setTalle(t);
                       setErrorTalle(false);
                     }}
