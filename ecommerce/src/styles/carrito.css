@@ -1,0 +1,63 @@
+.contenedor-lista-carrito {
+  max-height: 520px !important;
+  overflow-y: auto !important;
+  padding-right: 8px !important;
+}
+
+.contenedor-lista-carrito::-webkit-scrollbar {
+  width: 6px;
+}
+
+.contenedor-lista-carrito::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.contenedor-lista-carrito::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border-radius: 10px;
+}
+
+.contenedor-lista-carrito::-webkit-scrollbar-thumb:hover {
+  background: rgba(37, 99, 235, 0.4) !important;
+}
+
+.item-carrito {
+  display: flex !important;
+  align-items: stretch !important;
+  background-color: #1e293b !important;
+  border: 1px solid rgba(255, 255, 255, 0.05) !important;
+  border-radius: 12px !important;
+  padding: 16px !important;
+  margin-bottom: 16px !important;
+}
+
+.info-item-carrito {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  flex-grow: 1 !important;
+  padding-left: 16px !important;
+}
+
+/* BOTÓN ELIMINAR */
+.btn-danger,
+.item-carrito button[class*="btn-danger"],
+.btn-eliminar-carrito {
+  margin-top: auto !important;
+  align-self: flex-start !important;
+  background-color: rgba(239, 68, 68, 0.1) !important;
+  color: #ef4444 !important;
+  border: 1px solid rgba(239, 68, 68, 0.2) !important;
+  font-weight: 500 !important;
+  font-size: 0.85rem !important;
+  text-transform: uppercase !important;
+  padding: 6px 16px !important;
+  border-radius: 6px !important;
+  transition: all 0.2s ease !important;
+}
+
+.btn-danger:hover,
+.btn-eliminar-carrito:hover {
+  background-color: #ef4444;
+  color: #ffffff;
+}
