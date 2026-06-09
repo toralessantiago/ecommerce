@@ -50,19 +50,28 @@ function FormularioCompra({ alTerminar, totalAPagar }) {
             <Row className="mb-3">
                 <Form.Group as={Col} controlId="formGridNombre">
                     <Form.Label>Nombre/s</Form.Label>
-                    <Form.Control name="nombre" required type="text" placeholder="Nombre/s" defaultValue="Juan" />
+                    <Form.Control name="nombre" required type="text" placeholder="Nombre/s"/>
                     <Form.Control.Feedback>Se ve bien!</Form.Control.Feedback>
+                    <Form.Control.Feedback type="invalid">
+                    Por favor ingresa tu nombre.
+                </Form.Control.Feedback>
                 </Form.Group>
 
                 <Form.Group as={Col} controlId="formGridApellido">
                     <Form.Label>Apellido/s</Form.Label>
-                    <Form.Control name="apellido" required type="text" placeholder="Apellido/s" defaultValue="Perez" />
+                    <Form.Control name="apellido" required type="text" placeholder="Apellido/s"/>
                     <Form.Control.Feedback>Se ve bien!</Form.Control.Feedback>
+                    <Form.Control.Feedback type="invalid">
+                    Por favor ingresa tu apellido.
+                </Form.Control.Feedback>
                 </Form.Group>
 
                 <Form.Group as={Col} controlId="formGridEmail">
                     <Form.Label>Email</Form.Label>
-                    <Form.Control name="email" type="email" placeholder="Ingresa tu email" />
+                    <Form.Control name="email" required type="email" placeholder="Ingresa tu email" />
+                    <Form.Control.Feedback type="invalid">
+                    Por favor ingresa una email válido.
+                </Form.Control.Feedback>
                 </Form.Group>
             </Row>
 
@@ -80,13 +89,6 @@ function FormularioCompra({ alTerminar, totalAPagar }) {
             </Form.Group>
 
             <Row className="mb-3">
-                <Form.Group as={Col} controlId="formGridCity">
-                    <Form.Label>Localidad</Form.Label>
-                    <Form.Control name="localidad" type="text" placeholder="Ingresa tu localidad" required />
-                    <Form.Control.Feedback type="invalid">
-                        Por favor ingresa una localidad válida.
-                    </Form.Control.Feedback>
-                </Form.Group>
 
                 <Form.Group as={Col} controlId="formGridState">
                     <Form.Label>Provincia</Form.Label>
@@ -119,6 +121,14 @@ function FormularioCompra({ alTerminar, totalAPagar }) {
                     </Form.Select>
                     <Form.Control.Feedback type="invalid">
                         Por favor selecciona tu provincia.
+                    </Form.Control.Feedback>
+                </Form.Group>
+
+                <Form.Group as={Col} controlId="formGridCity">
+                    <Form.Label>Localidad</Form.Label>
+                    <Form.Control name="localidad" type="text" placeholder="Ingresa tu localidad" required />
+                    <Form.Control.Feedback type="invalid">
+                        Por favor ingresa una localidad válida.
                     </Form.Control.Feedback>
                 </Form.Group>
 

@@ -7,6 +7,7 @@ import "../styles/inicio.css";
 import "../styles/carousel.css";
 import "../styles/layout.css";
 import "../styles/ui-interacciones.css";
+import "../styles/base.css"
 
 function Inicio() {
   const lanzamientos = productos.slice(0, 4);

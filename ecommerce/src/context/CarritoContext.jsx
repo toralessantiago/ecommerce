@@ -1,9 +1,17 @@
-import { createContext, useState } from "react";
+import { createContext, useState, useEffect } from "react";
 
 export const CarritoContext = createContext();
 
 export function CartProvider({ children }) {
-  const [carrito, setCarrito] = useState([]);
+  const [carrito, setCarrito] = useState(() => {
+    const carritoGuardado = localStorage.getItem("carritoPersistente");
+    return carritoGuardado ? JSON.parse(carritoGuardado) : [];
+  }
+  );
+
+  useEffect(() => {
+    localStorage.setItem("carritoPersistente", JSON.stringify(carrito));
+  }, [carrito]);
 
   function agregarAlCarrito(producto) {
     setCarrito((carritoActual) => {
@@ -38,8 +46,8 @@ export function CartProvider({ children }) {
     setCarrito((carritoActual) =>
       carritoActual.map((producto) =>
         producto.id === id &&
-        producto.talle === talle &&
-        producto.cantidad < producto.stock
+          producto.talle === talle &&
+          producto.cantidad < producto.stock
           ? { ...producto, cantidad: producto.cantidad + 1 } //spread operator ... copia todo el producto, mantiene id nombre etc y aumenta solo la cantidad
           : producto,
       ),

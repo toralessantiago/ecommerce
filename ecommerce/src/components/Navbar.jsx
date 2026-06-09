@@ -61,6 +61,9 @@ function Navbar() {
           <NavLink className="nav-link text-white" to="/contacto">
             Contacto
           </NavLink>
+        <NavLink className="nav-link text-white" to="/nosotros">
+            Nosotros
+          </NavLink>
         </div>
 
         {/* LUPA + CARRITO */}
