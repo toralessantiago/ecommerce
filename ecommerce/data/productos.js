@@ -1,10 +1,47 @@
 export const productos = [
   {
+    id: 13,
+    nombre: "Camiseta Selección Argentina 2026",
+    categoria: "Futbol",
+    precio: 139000,
+    stock: 25,
+    descripcion:
+      "Camiseta oficial de la Selección Argentina. Tecnología AEROREADY para mayor comodidad y transpirabilidad.",
+    imagenes: ["/imagenes/argentina1.jpg", "/imagenes/argentina2.jpg"],
+    talles: ["M", "L", "XL"],
+  },
+
+  {
+    id: 14,
+    nombre: "Botines PUMA future 9 match TT hombre",
+    categoria: "Futbol",
+    precio: 170000,
+    stock: 14,
+    descripcion: "Botines PUMA future 9 match tt de futbol para hombre.",
+    imagenes: ["/imagenes/botines1.jpg", "/imagenes/botines2.jpg"],
+    talles: ["43", "44", "45"],
+  },
+
+  {
+    id: 15,
+    nombre: "Camiseta River Plate 125 Aniversario",
+    categoria: "Futbol",
+    precio: 169000,
+    stock: 19,
+    descripcion:
+      "Camiseta con tecnología de tejido Climacool para ofrecer una comodidad fresca y seca.",
+    imagenes: ["/imagenes/river1.jpg", "/imagenes/river2.jpg"],
+    talles: ["S", "M", "L"],
+  },
+  {
     id: 1,
     nombre: "Remera Running Dry-Fit",
     categoria: "Indumentaria",
     precio: 15000,
-    imagenes: ["/imagenes/remera-running.jpg", "/imagenes/remera-running-2.jpg"],
+    imagenes: [
+      "/imagenes/remera-running.jpg",
+      "/imagenes/remera-running-2.jpg",
+    ],
     descripcion:
       "Remera transpirable de secado rápido, ideal para running y entrenamiento aeróbico.",
     stock: 25,
@@ -48,7 +85,10 @@ export const productos = [
     nombre: "Campera Rompevientos",
     categoria: "Abrigo",
     precio: 45000,
-    imagenes: ["/imagenes/campera-rompevientos.jpg", "/imagenes/campera-rompevientos-2.jpg"],
+    imagenes: [
+      "/imagenes/campera-rompevientos.jpg",
+      "/imagenes/campera-rompevientos-2.jpg",
+    ],
     descripcion:
       "Campera ligera y compactable, resistente al viento y llovizna leve.",
     stock: 12,
@@ -81,7 +121,10 @@ export const productos = [
     nombre: "Short de Fútbol",
     categoria: "Indumentaria",
     precio: 16000,
-    imagenes: ["/imagenes/short-de-futbol.jpg", "/imagenes/short-de-futbol-2.jpg"],
+    imagenes: [
+      "/imagenes/short-de-futbol.jpg",
+      "/imagenes/short-de-futbol-2.jpg",
+    ],
     descripcion:
       "Short ligero con suspensor interno y tecnología de ventilación.",
     stock: 35,
@@ -130,28 +173,5 @@ export const productos = [
       "Bolso amplio con compartimento ventilado separado para el calzado húmedo.",
     stock: 14,
     talles: ["ÚNICO"],
-  },
-  {
-    id: 13,
-    nombre: "Camiseta Selección Argentina 2026",
-    categoria: "Futbol",
-    precio: 139000,
-    stock: 25,
-    descripcion:
-      "Camiseta oficial de la Selección Argentina. Tecnología AEROREADY para mayor comodidad y transpirabilidad.",
-    imagenes: ["/imagenes/argentina1.jpg", "/imagenes/argentina2.jpg"],
-    talles: ["M", "L", "XL"],
-  },
-
-  {
-    id: 14,
-    nombre: "Botines PUMA future 9 match TT hombre",
-    categoria: "Futbol",
-    precio: 170000,
-    stock: 14,
-    descripcion:
-      "Botines PUMA future 9 match tt de futbol para hombre.",
-    imagenes: ["/imagenes/botines1.jpg", "/imagenes/botines2.jpg"],
-    talles: ["43", "44", "45"],
   },
 ];

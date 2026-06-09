@@ -17,7 +17,7 @@ function Navbar() {
   const navigate = useNavigate();
 
   const productosFiltrados = productos.filter((p) =>
-    p.nombre.toLowerCase().includes((busqueda || "").toLowerCase())
+    p.nombre.toLowerCase().includes((busqueda || "").toLowerCase()),
   );
 
   useEffect(() => {
@@ -46,11 +46,7 @@ function Navbar() {
       <div className="container-fluid d-flex align-items-center p-0">
         {/* LOGO */}
         <NavLink className="navbar-brand" to="/">
-          <img
-            src={miLogo}
-            alt="Logo"
-            className="navbar-logo-img"
-          />
+          <img src={miLogo} alt="Logo" className="navbar-logo-img" />
         </NavLink>
 
         {/* PRODUCTOS */}
@@ -58,11 +54,12 @@ function Navbar() {
           <NavLink className="nav-link text-white" to="/productos">
             Productos
           </NavLink>
+
+          <NavLink className="nav-link text-white" to="/nosotros">
+            Nosotros
+          </NavLink>
           <NavLink className="nav-link text-white" to="/contacto">
             Contacto
-          </NavLink>
-        <NavLink className="nav-link text-white" to="/nosotros">
-            Nosotros
           </NavLink>
         </div>
 
