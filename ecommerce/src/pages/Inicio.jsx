@@ -15,7 +15,7 @@ function Inicio() {
 
   return (
     <div>
-      {/* CAROUSEL BANNERS*/}
+      {/*CAROUSEL BANNERS*/}
       <Carousel
         fade
         controls={false}
@@ -66,7 +66,7 @@ function Inicio() {
         </div>
       </Container>
 
-      {/*OFERTAS  */}
+      {/*OFERTAS*/}
       <Container className="seccion">
         <div className="seccion-header">
           <h2 className="text-center fw-bold text-uppercase mt-4">OFERTAS</h2>
@@ -79,7 +79,7 @@ function Inicio() {
         </div>
       </Container>
 
-      {/*= PROMOCIONES - */}
+      {/*PROMOCIONES*/}
       <Container className="seccion">
         <div className="seccion-header">
           <h2 className="text-center fw-bold text-uppercase mt-4">PROMOCIONES</h2>
