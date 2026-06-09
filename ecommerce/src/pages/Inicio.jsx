@@ -27,7 +27,7 @@ function Inicio() {
           <Link to="/producto/13">
             <img
               className="d-block w-100 banner-imagen"
-              src="/imagenes/banner1.jpg"
+              src="imagenes/banner1.jpg"
               alt="Banner 1"
             />
           </Link>
@@ -37,7 +37,7 @@ function Inicio() {
           <Link to="/producto/15">
             <img
               className="d-block w-100 banner-imagen"
-              src="/imagenes/banner2.jpg"
+              src="imagenes/banner2.jpg"
               alt="Banner 2"
             />
           </Link>
@@ -47,7 +47,7 @@ function Inicio() {
           <Link to="/producto/14">
             <img
               className="d-block w-100 banner-imagen"
-              src="/imagenes/banner3.jpg"
+              src="imagenes/banner3.jpg"
               alt="Banner 3"
             />
           </Link>
