@@ -13,7 +13,9 @@ function ProductoCard({ producto }) {
       ? producto.imagenes
       : [];
 
-  const imagenPrincipal = imagenes[0] || "/placeholder.png";
+  const imagenPrincipal = imagenes[0]
+    ? `${import.meta.env.BASE_URL}${imagenes[0]}`
+    : `${import.meta.env.BASE_URL}placeholder.png`;
 
   const talles = Array.isArray(producto.talles) ? producto.talles : [];
 
