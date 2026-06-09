@@ -10,9 +10,9 @@ import { CartProvider } from "./context/CarritoContext";
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
      <CartProvider>
-      <BrowserRouter>
+      <HashRouter>
         <App />
-      </BrowserRouter>
+      </HashRouter>
     </CartProvider>
   </React.StrictMode>
 );
