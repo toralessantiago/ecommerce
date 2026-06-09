@@ -9,12 +9,6 @@ html, body, #root {
   min-height: 100vh;
 }
 
-@media (max-width: 768px) {
-  #root {
-    gap: 16px;
-  }
-}
-
 h1,
 h2,
 h3,

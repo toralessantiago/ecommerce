@@ -19,7 +19,7 @@ function CarritoItem({ producto }) {
   return (
     <Card className="mb-3">
       <Card.Body>
-        <Row className="align-items-center">
+        <Row className="align-items-center flex">
           <Col md={3}>
             <img
               src={

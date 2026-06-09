@@ -55,8 +55,12 @@
   top: 0;
   z-index: 9999;
 }
+
 @media (max-width: 768px) {
   .navbar-logo-img {
     height: 35px;
+  }
+  .navbar{
+    padding: 12px;
   }
 }

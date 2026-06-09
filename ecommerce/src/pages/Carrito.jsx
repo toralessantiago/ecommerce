@@ -74,7 +74,7 @@ function Carrito() {
             <Card>
               <Card.Body>
                 <h4>Resumen de compra</h4>
-                <hr />
+                <hr/>
                 <p>Productos: {carrito.length}</p>
                 <p>Total unidades: {cantidadUnidades}</p>
                 <h5>Total: ${formatearPrecio(total)}</h5>

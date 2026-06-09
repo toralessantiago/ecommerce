@@ -43,7 +43,7 @@ function Navbar() {
 
   return (
     <nav className="navbar navbar-dark bg-dark navbar-fijo">
-      <div className="container-fluid d-flex align-items-center">
+      <div className="container-fluid d-flex align-items-center p-0">
         {/* LOGO */}
         <NavLink className="navbar-brand" to="/">
           <img
@@ -57,6 +57,9 @@ function Navbar() {
         <div className="d-flex gap-3">
           <NavLink className="nav-link text-white" to="/productos">
             Productos
+          </NavLink>
+          <NavLink className="nav-link text-white" to="/contacto">
+            Contacto
           </NavLink>
         </div>
 

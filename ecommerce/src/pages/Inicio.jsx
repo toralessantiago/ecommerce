@@ -56,7 +56,7 @@ function Inicio() {
       {/*LANZAMIENTOS*/}
       <Container className="seccion">
         <div className="seccion-header">
-          <h2>LANZAMIENTOS</h2>
+          <h2 className="text-center fw-bold text-uppercase mt-4">LANZAMIENTOS</h2>
         </div>
 
         <div className="grid-productos">
@@ -69,7 +69,7 @@ function Inicio() {
       {/*OFERTAS  */}
       <Container className="seccion">
         <div className="seccion-header">
-          <h2>OFERTAS</h2>
+          <h2 className="text-center fw-bold text-uppercase mt-4">OFERTAS</h2>
         </div>
 
         <div className="grid-productos">
@@ -82,7 +82,7 @@ function Inicio() {
       {/*= PROMOCIONES - */}
       <Container className="seccion">
         <div className="seccion-header">
-          <h2>PROMOCIONES</h2>
+          <h2 className="text-center fw-bold text-uppercase mt-4">PROMOCIONES</h2>
         </div>
 
         <div className="grid-productos">

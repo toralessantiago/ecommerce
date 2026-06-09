@@ -1,5 +1,4 @@
 /* ================= GRID PRODUCTOS ================= */
-
 .grid-productos {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
