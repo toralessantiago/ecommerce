@@ -106,13 +106,13 @@ npm run dev
 ```
 
 ## 👥 Integrantes
-Movia, Martina Trinidad
-Torales, Santiago
-Almirón, Estefanía Abigail
-Alaniz, Rocio Abril
+* Movia, Martina Trinidad
+* Torales, Santiago
+* Almirón, Estefanía Abigail
+* Alaniz, Rocio Abril
 
 ## 📌 Notas
-Proyecto sin backend (simulación completa)
-Carrito persistente en localStorage
-Diseño responsive
-SPA con React Router DOM
+* Proyecto sin backend (simulación completa)
+* Carrito persistente en localStorage
+* Diseño responsive
+* SPA con React Router DOM
