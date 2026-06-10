@@ -17,10 +17,10 @@ import ScrollToTop from "./components/ScrollToTop.jsx";
 function App() {
   return (
     <BusquedaProvider>
+      <ScrollToTop />
       <Navbar />
 
       <main style={{ flex: 1 }}>
-        <ScrollToTop/>
         <Routes>
           <Route path="/" element={<Inicio />} />
           <Route path="/productos" element={<Productos />} />
