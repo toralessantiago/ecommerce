@@ -7,7 +7,7 @@ export const productos = [
     stock: 25,
     descripcion:
       "Camiseta oficial de la Selección Argentina. Tecnología AEROREADY para mayor comodidad y transpirabilidad.",
-    imagenes: ["/imagenes/argentina1.jpg", "/imagenes/argentina2.jpg"],
+    imagenes: ["/ecommerce/imagenes/argentina1.jpg", "/ecommerce/imagenes/argentina2.jpg"],
     talles: ["M", "L", "XL"],
   },
 
@@ -18,7 +18,7 @@ export const productos = [
     precio: 170000,
     stock: 14,
     descripcion: "Botines PUMA future 9 match tt de futbol para hombre.",
-    imagenes: ["/imagenes/botines1.jpg", "/imagenes/botines2.jpg"],
+    imagenes: ["/ecommerce/imagenes/botines1.jpg", "/ecommerce/imagenes/botines2.jpg"],
     talles: ["43", "44", "45"],
   },
 
@@ -30,17 +30,17 @@ export const productos = [
     stock: 19,
     descripcion:
       "Camiseta con tecnología de tejido Climacool para ofrecer una comodidad fresca y seca.",
-    imagenes: ["/imagenes/river1.jpg", "/imagenes/river2.jpg"],
+    imagenes: ["/ecommerce/imagenes/river1.jpg", "/ecommerce/imagenes/river2.jpg"],
     talles: ["S", "M", "L"],
   },
   {
     id: 1,
     nombre: "Remera Running Dry-Fit",
-    categoria: "Indumentaria",
+    categoria: "/ecommerce/Indumentaria",
     precio: 15000,
     imagenes: [
-      "/imagenes/remera-running.jpg",
-      "/imagenes/remera-running-2.jpg",
+      "/ecommerce/imagenes/remera-running.jpg",
+      "/ecommerce/imagenes/remera-running-2.jpg",
     ],
     descripcion:
       "Remera transpirable de secado rápido, ideal para running y entrenamiento aeróbico.",
@@ -50,9 +50,9 @@ export const productos = [
   {
     id: 2,
     nombre: "Pantalón Jogging Algodón",
-    categoria: "Indumentaria",
+    categoria: "/ecommerce/Indumentaria",
     precio: 28000,
-    imagenes: ["/imagenes/jogging.jpg", "/imagenes/jogging-2.jpg"],
+    imagenes: ["/ecommerce/imagenes/jogging.jpg", "/ecommerce/imagenes/jogging-2.jpg"],
     descripcion:
       "Pantalón cómodo con ajuste en los tobillos, para entrenamiento de fuerza o uso diario.",
     stock: 15,
@@ -63,7 +63,7 @@ export const productos = [
     nombre: "Zapatillas Trail Running",
     categoria: "Calzado",
     precio: 85000,
-    imagenes: ["/imagenes/zapatillas.jpg", "/imagenes/zapatillas-2.jpg"],
+    imagenes: ["/ecommerce/imagenes/zapatillas.jpg", "/ecommerce/imagenes/zapatillas-2.jpg"],
     descripcion:
       "Zapatillas de running versátiles con una sensación suave y elástica.",
     stock: 10,
@@ -72,9 +72,9 @@ export const productos = [
   {
     id: 4,
     nombre: "Calza Deportiva Larga",
-    categoria: "Indumentaria",
+    categoria: "/ecommerce/Indumentaria",
     precio: 18000,
-    imagenes: ["/imagenes/calza.jpg", "/imagenes/calza-2.jpg"],
+    imagenes: ["/ecommerce/imagenes/calza.jpg", "/ecommerce/imagenes/calza-2.jpg"],
     descripcion:
       "Calza de compresión con cintura alta y costuras planas para evitar roces.",
     stock: 0,
@@ -86,8 +86,8 @@ export const productos = [
     categoria: "Abrigo",
     precio: 45000,
     imagenes: [
-      "/imagenes/campera-rompevientos.jpg",
-      "/imagenes/campera-rompevientos-2.jpg",
+      "/ecommerce/imagenes/campera-rompevientos.jpg",
+      "/ecommerce/imagenes/campera-rompevientos-2.jpg",
     ],
     descripcion:
       "Campera ligera y compactable, resistente al viento y llovizna leve.",
@@ -97,9 +97,9 @@ export const productos = [
   {
     id: 6,
     nombre: "Top Deportivo Alto Impacto",
-    categoria: "Indumentaria",
+    categoria: "/ecommerce/Indumentaria",
     precio: 14000,
-    imagenes: ["/imagenes/top.jpg", "/imagenes/top-2.jpg"],
+    imagenes: ["/ecommerce/imagenes/top.jpg", "/ecommerce/imagenes/top-2.jpg"],
     descripcion:
       "Soporte firme con espalda cruzada para entrenamientos de alta intensidad.",
     stock: 20,
@@ -110,7 +110,7 @@ export const productos = [
     nombre: "Medias de Compresión Térmicas",
     categoria: "Accesorios",
     precio: 8500,
-    imagenes: ["/imagenes/medias.jpg", "/imagenes/medias-2.jpg"],
+    imagenes: ["/ecommerce/imagenes/medias.jpg", "/ecommerce/imagenes/medias-2.jpg"],
     descripcion:
       "Medias hasta la rodilla diseñadas para mejorar la circulación y retener el calor.",
     stock: 45,
@@ -119,11 +119,11 @@ export const productos = [
   {
     id: 8,
     nombre: "Short de Fútbol",
-    categoria: "Indumentaria",
+    categoria: "/ecommerce/Indumentaria",
     precio: 16000,
     imagenes: [
-      "/imagenes/short-de-futbol.jpg",
-      "/imagenes/short-de-futbol-2.jpg",
+      "/ecommerce/imagenes/short-de-futbol.jpg",
+      "/ecommerce/imagenes/short-de-futbol-2.jpg",
     ],
     descripcion:
       "Short ligero con suspensor interno y tecnología de ventilación.",
@@ -135,7 +135,7 @@ export const productos = [
     nombre: "Botines Césped Sintético",
     categoria: "Calzado",
     precio: 72000,
-    imagenes: ["/imagenes/botines.jpg", "/imagenes/botines-2.jpg"],
+    imagenes: ["/ecommerce/imagenes/botines.jpg", "/ecommerce/imagenes/botines-2.jpg"],
     descripcion:
       "Botines con tapones múltiples para máxima tracción en canchas de pasto sintético.",
     stock: 10,
@@ -146,7 +146,7 @@ export const productos = [
     nombre: "Gorra Running Ultraligera",
     categoria: "Accesorios",
     precio: 9500,
-    imagenes: ["/imagenes/gorra.jpg", "/imagenes/gorra-2.jpg"],
+    imagenes: ["/ecommerce/imagenes/gorra.jpg", "/ecommerce/imagenes/gorra-2.jpg"],
     descripcion:
       "Gorra con paneles de malla transpirable y banda interna absorbente.",
     stock: 22,
@@ -157,7 +157,7 @@ export const productos = [
     nombre: "Buzo Medio Cierre Térmico",
     categoria: "Abrigo",
     precio: 38000,
-    imagenes: ["/imagenes/buzo.jpg", "/imagenes/buzo-2.jpg"],
+    imagenes: ["/ecommerce/imagenes/buzo.jpg", "/ecommerce/imagenes/buzo-2.jpg"],
     descripcion:
       "Buzo de micropolar transpirable, ideal para calentamientos en días fríos.",
     stock: 18,
@@ -168,7 +168,7 @@ export const productos = [
     nombre: "Bolso Deportivo 40L",
     categoria: "Accesorios",
     precio: 32000,
-    imagenes: ["/imagenes/bolso.jpg", "/imagenes/bolso-2.jpg"],
+    imagenes: ["/ecommerce/imagenes/bolso.jpg", "/ecommerce/imagenes/bolso-2.jpg"],
     descripcion:
       "Bolso amplio con compartimento ventilado separado para el calzado húmedo.",
     stock: 14,
