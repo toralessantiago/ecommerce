@@ -36,7 +36,7 @@ export const productos = [
   {
     id: 1,
     nombre: "Remera Running Dry-Fit",
-    categoria: "Indumentaria",
+    categoria: "/ecommerce/Indumentaria",
     precio: 15000,
     imagenes: [
       "/ecommerce/imagenes/remera-running.jpg",
@@ -50,7 +50,7 @@ export const productos = [
   {
     id: 2,
     nombre: "Pantalón Jogging Algodón",
-    categoria: "Indumentaria",
+    categoria: "/ecommerce/Indumentaria",
     precio: 28000,
     imagenes: ["/ecommerce/imagenes/jogging.jpg", "/ecommerce/imagenes/jogging-2.jpg"],
     descripcion:
@@ -72,7 +72,7 @@ export const productos = [
   {
     id: 4,
     nombre: "Calza Deportiva Larga",
-    categoria: "Indumentaria",
+    categoria: "/ecommerce/Indumentaria",
     precio: 18000,
     imagenes: ["/ecommerce/imagenes/calza.jpg", "/ecommerce/imagenes/calza-2.jpg"],
     descripcion:
@@ -97,7 +97,7 @@ export const productos = [
   {
     id: 6,
     nombre: "Top Deportivo Alto Impacto",
-    categoria: "Indumentaria",
+    categoria: "/ecommerce/Indumentaria",
     precio: 14000,
     imagenes: ["/ecommerce/imagenes/top.jpg", "/ecommerce/imagenes/top-2.jpg"],
     descripcion:
@@ -119,7 +119,7 @@ export const productos = [
   {
     id: 8,
     nombre: "Short de Fútbol",
-    categoria: "Indumentaria",
+    categoria: "/ecommerce/Indumentaria",
     precio: 16000,
     imagenes: [
       "/ecommerce/imagenes/short-de-futbol.jpg",
