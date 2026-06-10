@@ -12,6 +12,7 @@ import Nosotros from "./pages/Nosotros";
 import Error404 from "./pages/Error404.jsx";
 import { Routes, Route } from "react-router-dom";
 import { BusquedaProvider } from "./context/BusquedaContext.jsx";
+import ScrollToTop from "./components/ScrollToTop.jsx";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <Navbar />
 
       <main style={{ flex: 1 }}>
+        <ScrollToTop/>
         <Routes>
           <Route path="/" element={<Inicio />} />
           <Route path="/productos" element={<Productos />} />
