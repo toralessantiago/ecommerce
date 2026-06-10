@@ -1,0 +1,12 @@
+.bg-dark {
+  background-color: #111111 !important;
+}
+
+.fs-7 {
+  font-size: 0.75rem;
+  font-family: "Inter", sans-serif;
+}
+
+.link-light {
+  transition: color 0.15s ease;
+}

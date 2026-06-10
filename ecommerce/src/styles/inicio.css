@@ -1,0 +1,50 @@
+/* ================= GRID PRODUCTOS ================= */
+.grid-productos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .grid-productos {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .producto-card-hover {
+    width: 100%;
+  }
+
+  .producto-card-hover .titulo {
+    font-size: 0.85rem !important;
+    line-height: 1.2;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+
+    overflow: hidden;
+    min-height: 2.2rem;
+  }
+
+  .producto-card-hover .precio {
+    font-size: 0.9rem !important;
+  }
+
+  .card-body {
+    padding: 8px !important;
+  }
+
+  .ver-todo {
+    font-size: 10px;
+    padding: 4px 10px;
+  }
+}
+
+.carousel {
+  margin-top: 0;
+}
+
+.seccion:first-of-type {
+  margin-top: 0;
+}

@@ -1,0 +1,63 @@
+.miniatura-producto {
+  width: 65px;
+  height: 65px;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  padding: 4px;
+  border: 1px solid #e8e8e8;
+  background-color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.miniatura-producto:hover {
+  border-color: #cfcfcf;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.04);
+}
+
+@media (min-width: 768px) {
+  .miniatura-producto {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+.imagen-principal-animada {
+  animation: deslizarFade 0.35s ease-out forwards;
+}
+
+@keyframes deslizarFade {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.boton-pop {
+  transition: transform 0.15s ease;
+}
+
+.boton-pop:active {
+  transform: scale(0.95);
+}
+
+.boton-pop.animar-click {
+  animation: popBoton 0.3s ease;
+}
+
+@keyframes popBoton {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
