@@ -25,6 +25,7 @@ function App() {
 
   return (
     <BusquedaProvider>
+      <ScrollToTop />
       <Navbar />
       <div
       style={{
@@ -42,7 +43,6 @@ function App() {
       </div>
 
       <main style={{ flex: 1 }}>
-        <ScrollToTop/>
         <Routes>
           <Route path="/" element={<Inicio />} />
           <Route path="/productos" element={<Productos />} />
