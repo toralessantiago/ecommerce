@@ -42,15 +42,15 @@ function Navbar() {
   }, [busqueda, navigate]);
 
   return (
-    <nav className="navbar navbar-dark bg-dark navbar-fijo">
-      <div className="container-fluid d-flex align-items-center p-0">
+    <nav className="navbar navbar-dark bg-dark navbar-fijo py-3 py-lg-2">
+      <div className="container-fluid d-flex flex-column flex-lg-row align-items-center p-0">
         {/* LOGO */}
-        <NavLink className="navbar-brand" to="/">
+        <NavLink className="navbar-brand m-0" to="/">
           <img src={miLogo} alt="Logo" className="navbar-logo-img" />
         </NavLink>
 
         {/* PRODUCTOS */}
-        <div className="d-flex gap-3">
+        <div className="d-flex gap-3 my-3 my-lg-0">
           <NavLink className="nav-link text-white" to="/productos">
             Productos
           </NavLink>
@@ -64,7 +64,7 @@ function Navbar() {
         </div>
 
         {/* LUPA + CARRITO */}
-        <div className="ms-auto d-flex align-items-center gap-3">
+        <div className="ms-lg-auto d-flex align-items-center gap-3">
           <button
             className="nav-link text-white bg-transparent border-0"
             onClick={() => {

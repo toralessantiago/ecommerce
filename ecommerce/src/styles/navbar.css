@@ -56,11 +56,18 @@
   z-index: 9999;
 }
 
+
 @media (max-width: 768px) {
   .navbar-logo-img {
-    height: 35px;
+    height: 55px !important; 
+    width: auto;
   }
+
   .navbar{
     padding: 12px;
+  }
+
+  .nav-link {
+    font-size: 1.0rem;
   }
 }
