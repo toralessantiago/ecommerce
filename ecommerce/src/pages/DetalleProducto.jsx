@@ -5,6 +5,7 @@ import { Container, Row, Col, Card } from "react-bootstrap";
 import { productos } from "../../data/productos";
 import BotonAgregar from "../components/BotonAgregar";
 import Error404 from "./Error404";
+import formatearPrecio from "../../utils/formatearPrecio";
 
 function DetalleProducto() {
   const { id } = useParams();
@@ -63,7 +64,7 @@ function DetalleProducto() {
 
           <h1 className="fw-bold">{producto.nombre}</h1>
 
-          <h2 className="my-4 fw-bold">${producto.precio}</h2>
+          <h2 className="my-4 fw-bold">${formatearPrecio(producto.precio)}</h2>
 
           <p>
             <strong>Stock:</strong>{" "}

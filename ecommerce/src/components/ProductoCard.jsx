@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import BotonAgregar from "./BotonAgregar";
+import formatearPrecio from "../../utils/formatearPrecio";
 
 function ProductoCard({ producto }) {
   const [hover, setHover] = useState(false);
@@ -49,7 +50,7 @@ function ProductoCard({ producto }) {
           </Link>
         </Card.Title>
 
-        <Card.Text className="precio">${producto.precio}</Card.Text>
+        <Card.Text className="precio">${formatearPrecio(producto.precio)}</Card.Text>
 
         {/* HOVER PANEL */}
         <div className={`hover-panel ${hover ? "show" : ""}`}>

@@ -14,10 +14,32 @@ import { Routes, Route } from "react-router-dom";
 import { BusquedaProvider } from "./context/BusquedaContext.jsx";
 import ScrollToTop from "./components/ScrollToTop.jsx";
 
+import { useContext } from "react";
+import { CarritoContext } from "./context/CarritoContext";
+import NotificacionCarrito from "./components/NotificacionCarrito";
+
 function App() {
+  const {
+  notificacion,
+  setNotificacion} = useContext(CarritoContext);
+
   return (
     <BusquedaProvider>
       <Navbar />
+      <div
+      style={{
+        position: "fixed",
+        bottom: "40px",
+        right: "20px",
+        zIndex: 9999,
+        maxWidth: "350px"
+      }}
+      >
+      <NotificacionCarrito
+      notificacion={notificacion}
+      onClose={() => setNotificacion(null)}
+      />
+      </div>
 
       <main style={{ flex: 1 }}>
         <ScrollToTop/>

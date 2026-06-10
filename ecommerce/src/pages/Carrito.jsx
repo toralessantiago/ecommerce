@@ -86,7 +86,9 @@ function Carrito() {
           <Row>
             <Col md={8}>
               {carrito.map((producto) => (
-                <CarritoItem key={producto.id} producto={producto} />
+                <CarritoItem
+                key={`${producto.id}-${producto.talle}`}
+                producto={producto} />
               ))}
             </Col>
             <Col md={4}>
@@ -123,12 +125,12 @@ function Carrito() {
         onHide={() => setMostrarConfirmacion(false)}
         centered
       >
-        <Modal.Header closeButton>
+        <Modal.Header closeButton className="border-0">
           <Modal.Title>Confirmación</Modal.Title>
         </Modal.Header>
         <Modal.Body>¿Está seguro de que desea vaciar el carrito?</Modal.Body>
 
-        <Modal.Footer>
+        <Modal.Footer className="border-0">
           <Button
             variant="secondary"
             onClick={() => setMostrarConfirmacion(false)}
