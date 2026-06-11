@@ -150,7 +150,7 @@ export const productos = [
 
   {
     id: 8,
-    nombre: "Short de Fútbol",
+    nombre: "Short de Entrenamiento",
     categoria: "Indumentaria",
     precio: 16000,
     imagenes: [
@@ -166,7 +166,7 @@ export const productos = [
   {
     id: 9,
     nombre: "Botines Césped Sintético",
-    categoria: "Calzado",
+    categoria: "Futbol",
     precio: 72000,
     imagenes: [
       "imagenes/botines.jpg",
