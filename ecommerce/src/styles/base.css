@@ -1,16 +1,18 @@
 @font-face {
-  font-family: "Horizon"; 
-  src: local("Horizon"), 
-       url("../fonts/Horizon.otf") format("opentype");
+  font-family: "Horizon";
+  src:
+    local("Horizon"),
+    url("../fonts/Horizon.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 
-html, body, #root {
+html,
+body,
+#root {
   height: 100%;
   margin: 0;
-  padding-top: 20px;
-
+  padding-top: 23.3px;
 }
 
 #root {
@@ -26,8 +28,6 @@ h3 {
   font-weight: 700;
   color: #000000;
 }
-
-
 
 h4 {
   font-family: "Urbanist", sans-serif;
