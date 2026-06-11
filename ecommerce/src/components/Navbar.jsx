@@ -2,7 +2,7 @@ import { useState, useContext, useEffect } from "react";
 import { CarritoContext } from "../context/CarritoContext";
 import { BusquedaContext } from "../context/BusquedaContext";
 import { NavLink, Link, useNavigate } from "react-router-dom";
-import miLogo from "/src/assets/logoSimple.jpeg";
+import miLogo from "/logo-apex-2.svg";
 import { BsCart3, BsSearch } from "react-icons/bs";
 import { productos } from "../../data/productos";
 import "../styles/navbar.css";
