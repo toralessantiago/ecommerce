@@ -26,8 +26,9 @@
 }
 
 .talle-chip {
-  min-width: 36px;
+  min-width: 48px;
   height: 36px;
+  padding: 0 10px;
 
   display: flex;
   align-items: center;
@@ -38,6 +39,13 @@
 
   background: white;
   cursor: pointer;
+
+  font-size: 0.875rem;
+  line-height: 1;
+  white-space: nowrap;
+  text-transform: none;
+  font-variant: none;
+  -webkit-text-size-adjust: 100%;
 
   transition: all 0.2s ease;
 }
@@ -51,3 +59,4 @@
   color: white;
   border-color: #111;
 }
+
