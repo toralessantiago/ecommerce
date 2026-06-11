@@ -82,12 +82,12 @@ function DetalleProducto() {
                     key={t}
                     type="button"
                     disabled={producto.stock === 0}
+                    aria-label={`Talle ${t}`}
                     className={`talle-chip ${talle === t ? "active" : ""} ${
                       producto.stock === 0 ? "disabled-talle" : ""
                     }`}
                     onClick={() => {
                       if (producto.stock === 0) return;
-
                       setTalle(t);
                       setErrorTalle(false);
                     }}
