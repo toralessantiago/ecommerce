@@ -105,6 +105,11 @@ npm install
 npm run dev
 ```
 
+## 🌐 Deploy
+
+https://toralessantiago.github.io/ecommerce/#/
+
+
 ## 👥 Integrantes
 * Movia, Martina Trinidad
 * Torales, Santiago
