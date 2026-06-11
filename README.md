@@ -1,5 +1,8 @@
 # 🛍️ Apex Store - Tienda Online en React
 
+<img width="1900" height="910" alt="image" src="https://github.com/user-attachments/assets/55befc8f-19ab-49a3-a0a7-c05d9a329185" />
+
+
 ## 📌 Descripción del proyecto
 Apex Store es una aplicación web de tipo e-commerce desarrollada en React como trabajo práctico grupal. Simula una tienda online de indumentaria y artículos deportivos donde los usuarios pueden explorar productos, filtrarlos, ver su detalle, agregarlos al carrito y completar una compra simulada.
 
